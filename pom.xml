@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.1.0</modelVersion>
+  <groupId>com.acme</groupId>
+  <artifactId>maven-MNG-4530-example</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>dependency-overrides-bom</module>
+    <module>impl</module>
+    <module>something-with-javax.inject</module>
+  </modules>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>javax.inject</groupId>
+        <artifactId>javax.inject</artifactId>
+        <version>1</version>
+      </dependency>
+    </dependencies>
+    <dependencyOverrides>
+      <dependencyOverride>
+        <original>
+          <groupId>javax.inject</groupId>
+          <artifactId>javax.inject</artifactId>
+        </original>
+        <override>
+          <groupId>javax.inject</groupId>
+          <artifactId>javax.inject</artifactId>
+        </override>
+      </dependencyOverride>
+    </dependencyOverrides>
+  </dependencyManagement>
+</project>

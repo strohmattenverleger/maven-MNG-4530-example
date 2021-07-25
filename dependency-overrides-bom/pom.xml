@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.1.0</modelVersion>
+  <parent>
+    <groupId>com.acme</groupId>
+    <artifactId>maven-MNG-4530-example</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>maven-MNG-4530-example-dependency-overrides-bom</artifactId>
+  <packaging>pom</packaging>
+  <dependencyManagement>
+    <dependencyOverrides>
+      <dependencyOverride>
+        <original>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </original>
+        <override>
+          <groupId>org.slf4j</groupId>
+          <artifactId>jcl-over-slf4j</artifactId>
+          <version>1.7.31</version>
+        </override>
+      </dependencyOverride>
+    </dependencyOverrides>
+  </dependencyManagement>
+</project>
